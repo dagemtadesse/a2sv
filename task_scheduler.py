@@ -26,14 +26,13 @@ class Solution:
                 if not pq.empty():
                     (count, key) = pq.get()
                     length += 1
-                    print(key, end=" ")
+                    # print(key, end=" ")
                     if count < -1:
                         removed.append((count, key))
                 elif removed:
-                    print('_', end=" ")
+                    # print('_', end=" ")
                     length += 1
-            print()
-            # print(pq.queue,"->", removed)
+            # print()
             for item in removed:
                 (count, key) = item
                 if(count < -1):
@@ -41,24 +40,6 @@ class Solution:
 
             removed = []
 
-            # if len(queue) >= n + 1:
-            #     queue.pop(0)
-
-            # selected = None
-            # for task in count.keys():
-            #     size = count.get(selected) if count.get(selected) != None else 0
-            #     if not task in queue and size < count[task]:
-            #         selected = task
-
-            # queue.append(selected)
-            # length += 1
-
-            # if not selected is None:
-            #     count[selected] -= 1
-            #     if count[selected] <= 0:
-            #         del count[selected]
-        
-            # print(selected, end=" ")
         return length
                 
         
